@@ -8,8 +8,9 @@ T      0
      ¤¤¤¤¤
     ¤¤¤¤¤¤¤
 
-5 arvausta: kuvassa merkit "|", "|", "o", "T" sekä "^".
-Alussa sanan jokainen kirjain on tuntematon.
+Säännöt:
+-5 arvausta: kuvassa merkit "|", "|", "o", "T" sekä "^".
+-Alussa sanan jokainen kirjain on tuntematon.
 
 Funktioita/luokkia:
 -käyttöliittymä (sanan syöttö, pelaajan arvaukset)
