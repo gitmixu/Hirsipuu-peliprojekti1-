@@ -2,9 +2,9 @@ class Hirsipuu:
     pass #sovelluslogiikka
 
 class HirsipuuPeli:
-    def pelaa():
-        pass
-
+    def __init__(self):
+        self.__hirsipuu = Hirsipuu()
+    
     def hae_historia():
         pass
     
@@ -20,6 +20,17 @@ class HirsipuuPeli:
 
     def piirra_sana():
         pass
+    
+    def pelaa():
+        while True:
+            print("")
+            komento = input("Komento: ")
+            if komento == "1":
+                pass
+            elif komento == "2":
+                self.hae_historia()
+            elif komento == "3":
+                break
 
 class Pelihistoria:
     pass #Pelatut pelit tallennetaan täällä?
