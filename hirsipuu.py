@@ -1,5 +1,4 @@
 class Hirsipuu:
-    
     def piirto(self, arvo: int):
         pass #esim arvo 1 piirtää hirsipuun, 2 sanan, jne
 
@@ -11,7 +10,11 @@ class Hirsipuu:
             #pelin aikaiset ohjeet
             print("Kirjoita kirjain: ")
 
+class HirsipuuPeli:
     def pelaa():
+        pass
+
+    def hae_historia():
         pass
     
 class Pelihistoria:
