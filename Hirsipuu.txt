@@ -12,9 +12,9 @@ Säännöt:
 -5 arvausta: kuvassa merkit "|", "|", "o", "T" sekä "^".
 -Alussa sanan jokainen kirjain on tuntematon.
 -Pelataan tietokoneen kanssa; ohjelma valitsee yhden sanan tiedostosta jota pelaaja koettaa arvata.
+-Pelatessa mahdollisuus arvata koko sana tai yksi kirjain? Molemmissa väärästä yksi lisäys kuvaan.
 
 Funktioita/luokkia:
--käyttöliittymä (sanan syöttö, pelaajan arvaukset)
--tiedoston kirjoittaja (dataa pelistä; pelikerrat, arvuuteltuja sanoja, yrityskerrat/sana yms?)
--piirtäjä (ylläolevan kuvan täydentäminen pelin edetessä, arvattavan sanan esitys)
-
+-Hirsipuu (sovelluslogiikka)
+-HirsipuuPeli (käyttöliittymä)
+-Pelihistoria (tiedonhaku/tallennus)
