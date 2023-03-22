@@ -1,17 +1,4 @@
-class Hirsipuu:
-    pass #sovelluslogiikka
-
 class HirsipuuPeli:
-    def __init__(self):
-        self.__hirsipuu = Hirsipuu()
-    
-    def hae_historia(self):
-        pass
-    
-    def ohje_aloitus(self):
-        print("Hirsipuu")
-        print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
-
     def ohje_pelatessa(self):
         print("Kirjoita yksi kirjain.")
 
@@ -20,6 +7,17 @@ class HirsipuuPeli:
 
     def piirra_sana(self):
         pass
+
+class HirsipuuValikko:
+    def __init__(self):
+        self.__hirsipuu = HirsipuuPeli()
+    
+    def hae_historia(self):
+        pass
+    
+    def ohje_aloitus(self):
+        print("Hirsipuu")
+        print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
     
     def pelaa(self):
         self.ohje_aloitus()
