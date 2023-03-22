@@ -50,10 +50,6 @@ ahtaaja
 aihe
 aikaero
 aikakausi
-aikamuoto
-aikapommi
-aikataulu
-aikomus
 ainesosa
 ainoa
 airo
@@ -172,3 +168,16 @@ häkki
 häät
 höyhen
 höyry
+idea
+idiootti
+ihminen
+ikoni
+ilmainen
+ilves
+imuri
+inspiraatio
+intohimo
+ironia
+isä
+itikka
+itä
