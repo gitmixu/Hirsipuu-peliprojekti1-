@@ -22,24 +22,27 @@ class HirsipuuPeli:
                 self.__sanavarasto.append(sana)
         arvattava = choice(self.__sanavarasto)
 
+    def pelaa(self):
+        pass
+
 class HirsipuuValikko:
     def __init__(self):
         self.__hirsipuupeli = HirsipuuPeli()
-        self.__pelihistoria = Pelihistoria()
+        self.__historia = Pelihistoria()
     
     def ohje_aloitus(self):
         print("Hirsipuu")
         print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
     
-    def pelaa(self):
+    def suorita(self):
         self.ohje_aloitus()
         while True:
             print("")
             komento = input("Komento: ")
             if komento == "1":
-                pass
+                self.__hirsipuupeli.pelaa()
             elif komento == "2":
-                self.hae_historia()
+                self.__historia.hae_historia()
             elif komento == "3":
                 break
 
