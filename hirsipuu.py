@@ -9,7 +9,9 @@ class HirsipuuPeli:
             for rivi in tiedosto:
                 sana = rivi.strip()
                 sanavarasto.append(sana)
-        arvattava = choice(sanavarasto)
+        vastaus = choice(sanavarasto)
+        arvattava = len(vastaus) * "_"
+        print(vastaus)
         print(arvattava)
 
     def ohje_pelatessa(self):
@@ -29,14 +31,11 @@ class HirsipuuValikko:
         self.__hirsipuupeli = HirsipuuPeli()
         self.__historia = Pelihistoria()
     
-    def ohje_aloitus(self):
-        print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
-    
     def suorita(self):
         print("* * * Hirsipuu * * *")
-        self.ohje_aloitus()
         while True:
             print("")
+            print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
             komento = input("Komento: ")
             if komento == "1":
                 self.__hirsipuupeli.pelaa()
