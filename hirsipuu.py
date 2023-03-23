@@ -2,7 +2,7 @@ class HirsipuuPeli:
     def __init__(self):
         self.__elamat = 0
         self.__vastaus = ""
-        self.__arvattava = ""
+        self.__arvattava = []
 
     def pelin_aloitus(self):
         sanavarasto = []
@@ -17,7 +17,8 @@ class HirsipuuPeli:
                 sanavarasto.append(sana)
         self.__elamat = 5
         self.__vastaus = choice(sanavarasto)
-        self.__arvattava = len(self.__vastaus) * "_"
+        while len(self.__arvattava) < len(self.__vastaus):
+            self.__arvattava.append("_")
         print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
 
     def piirra_hirsipuu(self):
@@ -25,6 +26,12 @@ class HirsipuuPeli:
 
     def arvaa(self):
         syote = input("Kirjoita yksi kirjain tai arvaa koko sana: ")
+        if len(syote) == 1:
+            apuri = 0
+            while apuri < len(self.__vastaus):
+                if syote == self.__vastaus[apuri]:
+                    self.__arvattava[apuri] = syote
+                apuri += 1
 
     def pelaa(self):
         self.pelin_aloitus()
