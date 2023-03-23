@@ -3,9 +3,11 @@ class HirsipuuPeli:
         self.__elamat = 0
         self.__vastaus = ""
         self.__arvattava = []
+        self.__voitto = 0           #0 merkitsee tappiota, suuremmat arvot voittoa
 
     def pelin_aloitus(self):
-        self.__arvattava = []
+        self.__arvattava.clear()
+        self.__voitto = 0
         sanavarasto = []
         from random import choice
         with open("sanat.txt") as tiedosto:
@@ -27,12 +29,16 @@ class HirsipuuPeli:
 
     def arvaa(self):
         syote = input("Kirjoita yksi kirjain tai arvaa koko sana: ")
+        print()
         if len(syote) == 1:
             apuri = 0
             while apuri < len(self.__vastaus):
                 if syote == self.__vastaus[apuri]:
                     self.__arvattava[apuri] = syote
                 apuri += 1
+        else:
+            if syote == self.__vastaus:
+                self.__voitto += 1
 
     def pelaa(self):
         self.pelin_aloitus()
@@ -41,9 +47,15 @@ class HirsipuuPeli:
                 print(kirjain, end="")
             print("", end="\n")
             print()
-            print(f"yrityksiä jäljellä {self.__elamat * '*'}")
+            print(f"Yrityksiä jäljellä {self.__elamat * '*'}")
             self.arvaa()
+            if self.__voitto != 0:
+                break
             self.__elamat -= 1
+        if self.__voitto == 0:
+            print(f"Parempi onni ensi kerralla! Oikea vastaus oli {self.__vastaus}.")
+        else:
+            print(f"Upeaa! Arvasit sanan {self.__vastaus}!")
 
 class HirsipuuValikko:
     def __init__(self):
