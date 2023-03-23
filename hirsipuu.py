@@ -5,6 +5,7 @@ class HirsipuuPeli:
         self.__arvattava = []
 
     def pelin_aloitus(self):
+        self.__arvattava = []
         sanavarasto = []
         from random import choice
         with open("sanat.txt") as tiedosto:
@@ -15,8 +16,8 @@ class HirsipuuPeli:
                 if "Ã¶" in sana:
                     sana = sana.replace("Ã¶", "ö")
                 sanavarasto.append(sana)
-        self.__elamat = 5
         self.__vastaus = choice(sanavarasto)
+        self.__elamat = len(self.__vastaus) // 2 + 2        #elämien määrä riippuu sanan pituudesta?
         while len(self.__arvattava) < len(self.__vastaus):
             self.__arvattava.append("_")
         print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
@@ -36,9 +37,11 @@ class HirsipuuPeli:
     def pelaa(self):
         self.pelin_aloitus()
         while self.__elamat > 0:
-            print(self.__arvattava)
-            print("")
-            print(f"yrityksiä jäljellä {self.__elamat * '¤'}")
+            for kirjain in self.__arvattava:
+                print(kirjain, end="")
+            print("", end="\n")
+            print()
+            print(f"yrityksiä jäljellä {self.__elamat * '*'}")
             self.arvaa()
             self.__elamat -= 1
 
