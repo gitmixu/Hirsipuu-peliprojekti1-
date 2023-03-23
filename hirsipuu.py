@@ -2,6 +2,9 @@ class HirsipuuPeli:
     def __init__(self):
         self.__sanavarasto = []
 
+    def pelin_aloitus(self):
+        pass
+
     def ohje_pelatessa(self):
         print("Kirjoita yksi kirjain.")
 
@@ -21,10 +24,8 @@ class HirsipuuPeli:
 
 class HirsipuuValikko:
     def __init__(self):
-        self.__hirsipuu = HirsipuuPeli()
-    
-    def hae_historia(self):
-        pass
+        self.__hirsipuupeli = HirsipuuPeli()
+        self.__pelihistoria = Pelihistoria()
     
     def ohje_aloitus(self):
         print("Hirsipuu")
@@ -43,4 +44,5 @@ class HirsipuuValikko:
                 break
 
 class Pelihistoria:
-    pass #Pelatut pelit tallennetaan täällä?
+    def hae_historia(self):
+        pass
