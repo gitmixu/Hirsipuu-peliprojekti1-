@@ -1,6 +1,8 @@
 class HirsipuuPeli:
     def __init__(self):
         self.__elamat = 5
+        self.__vastaus = ""
+        self.__arvattava = ""
 
     def pelin_aloitus(self):
         sanavarasto = []
@@ -8,11 +10,15 @@ class HirsipuuPeli:
         with open("sanat.txt") as tiedosto:
             for rivi in tiedosto:
                 sana = rivi.strip()
+                if "Ã¤" in sana:
+                    sana = sana.replace("Ã¤", "ä")
+                if "Ã¶" in sana:
+                    sana = sana.replace("Ã¶", "ö")
                 sanavarasto.append(sana)
-        vastaus = choice(sanavarasto)
-        arvattava = len(vastaus) * "_"
-        print(vastaus)
-        print(arvattava)
+        self.__vastaus = choice(sanavarasto)
+        self.__arvattava = len(self.__vastaus) * "_"
+        print(self.__vastaus)
+        print(self.__arvattava)
 
     def ohje_pelatessa(self):
         print("Kirjoita yksi kirjain.")
