@@ -1,4 +1,7 @@
 class HirsipuuPeli:
+    def __init__(self):
+        self.__sanavarasto = []
+
     def ohje_pelatessa(self):
         print("Kirjoita yksi kirjain.")
 
@@ -7,6 +10,14 @@ class HirsipuuPeli:
 
     def piirra_sana(self):
         pass
+
+    def hae_sana(self):
+        from random import choice
+        with open("sanat.txt") as tiedosto:
+            for rivi in tiedosto:
+                sana = rivi.strip()
+                self.__sanavarasto.append(sana)
+        arvattava = choice(self.__sanavarasto)
 
 class HirsipuuValikko:
     def __init__(self):
