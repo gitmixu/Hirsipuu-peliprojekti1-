@@ -18,21 +18,21 @@ class HirsipuuPeli:
         self.__elamat = 5
         self.__vastaus = choice(sanavarasto)
         self.__arvattava = len(self.__vastaus) * "_"
-        print(self.__vastaus)
-        print(self.__arvattava)
+        print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
 
     def piirra_hirsipuu(self):
         pass
 
-    def piirra_sana(self):
-        pass
+    def arvaa(self):
+        syote = input("Kirjoita yksi kirjain tai arvaa koko sana: ")
 
     def pelaa(self):
         self.pelin_aloitus()
         while self.__elamat > 0:
+            print(self.__arvattava)
             print("")
             print(f"yrityksiä jäljellä {self.__elamat * '¤'}")
-            syote = input("Kirjoita yksi kirjain tai arvaa koko sana: ")
+            self.arvaa()
             self.__elamat -= 1
 
 class HirsipuuValikko:
