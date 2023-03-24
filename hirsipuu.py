@@ -64,7 +64,9 @@ class HirsipuuPeli:
             
     def tallenna(self):
         import datetime
-        tiedot = [str(datetime.date.today()), "aika", str(self.__vastaus), str(self.__elamat)]
+        pvm = datetime.date.today()
+        uusi_pvm = pvm.strftime("%d.%m.%Y")
+        tiedot = [str(uusi_pvm), "aika", str(self.__vastaus), str(self.__elamat)]
         with open("historia.csv", "a") as tiedosto:
             tiedosto.write(";".join(tiedot) + "\n")
 
@@ -74,15 +76,15 @@ class HirsipuuValikko:
         self.__historia = Pelihistoria()
     
     def suorita(self):
-        print("HIRSIPUU")
-        print("|   0  0")
-        print("|    0 0")
-        print("o      0")
-        print("T      0")
-        print("^      0")
-        print("      ¤¤¤")
-        print("     ¤¤¤¤¤")
-        print("    ¤¤¤¤¤¤¤")
+        print("                  HIRSIPUU")
+        print("                  |   0  0")
+        print("                  |    0 0")
+        print("                  o      0")
+        print("                  T      0")
+        print("                  ^      0")
+        print("                        ¤¤¤")
+        print("                       ¤¤¤¤¤")
+        print("                      ¤¤¤¤¤¤¤")
         while True:
             print("")
             print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
