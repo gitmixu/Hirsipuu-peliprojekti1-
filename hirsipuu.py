@@ -36,6 +36,11 @@ class HirsipuuPeli:
                 if syote == self.__vastaus[apuri]:
                     self.__arvattava[apuri] = syote
                 apuri += 1
+            verrokki = ""
+            for kirjain in self.__arvattava:
+                verrokki += kirjain
+            if verrokki == self.__vastaus:
+                self.__voitto += 1
         else:
             if syote == self.__vastaus:
                 self.__voitto += 1
