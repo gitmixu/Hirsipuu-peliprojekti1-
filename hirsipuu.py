@@ -68,7 +68,15 @@ class HirsipuuValikko:
         self.__historia = Pelihistoria()
     
     def suorita(self):
-        print("* * * Hirsipuu * * *")
+        print("HIRSIPUU")
+        print("|   0  0")
+        print("|    0 0")
+        print("o      0")
+        print("T      0")
+        print("^      0")
+        print("      ¤¤¤")
+        print("     ¤¤¤¤¤")
+        print("    ¤¤¤¤¤¤¤")
         while True:
             print("")
             print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
