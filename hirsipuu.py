@@ -1,5 +1,6 @@
 class HirsipuuPeli:
     def __init__(self):
+        self.__historia = Pelihistoria()
         self.__elamat = 0
         self.__vastaus = ""
         self.__arvattava = []
