@@ -25,7 +25,7 @@ class HirsipuuPeli:
             self.__arvattava.append("_")
         print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
 
-    def piirra_hirsipuu(self):
+    def tallenna(self):
         pass
 
     def arvaa(self):
@@ -87,7 +87,6 @@ class HirsipuuValikko:
             elif komento == "2":
                 self.__historia.hae_historia()
             elif komento == "3":
-                self.__historia.tallenna_historia()
                 break
 
 class Pelihistoria:
