@@ -25,7 +25,7 @@ class HirsipuuPeli:
             self.__arvattava.append("_")
         print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
 
-    def piirra_hirsipuu(self):
+    def tallenna(self):
         pass
 
     def arvaa(self):
