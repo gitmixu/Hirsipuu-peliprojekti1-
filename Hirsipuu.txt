@@ -18,3 +18,6 @@ Funktioita/luokkia:
 -Hirsipuu (sovelluslogiikka)
 -HirsipuuPeli (käyttöliittymä)
 -Pelihistoria (tiedonhaku/tallennus)
+
+Historian tulostus (esimerkki kun halutaan tarkastella tietoja)
+pvm     mennytaika    sana    elämät
