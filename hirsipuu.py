@@ -25,9 +25,6 @@ class HirsipuuPeli:
             self.__arvattava.append("_")
         print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
 
-    def tallenna(self):
-        pass
-
     def arvaa(self):
         syote = input("Kirjoita yksi kirjain tai arvaa koko sana: ")
         print()
@@ -60,8 +57,13 @@ class HirsipuuPeli:
             self.__elamat -= 1
         if self.__voitto == 0:
             print(f"Parempi onni ensi kerralla! Oikea vastaus oli {self.__vastaus}.")
+            self.tallenna()
         else:
             print(f"Upeaa! Arvasit sanan {self.__vastaus}!")
+            self.tallenna()
+            
+    def tallenna(self):
+        pass
 
 class HirsipuuValikko:
     def __init__(self):
