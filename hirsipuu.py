@@ -63,7 +63,10 @@ class HirsipuuPeli:
             self.tallenna()
             
     def tallenna(self):
-        pass
+        import datetime
+        tiedot = [str(datetime.date.today()), "aika", str(self.__vastaus), str(self.__elamat)]
+        with open("historia.csv", "a") as tiedosto:
+            tiedosto.write(";".join(tiedot) + "\n")
 
 class HirsipuuValikko:
     def __init__(self):
