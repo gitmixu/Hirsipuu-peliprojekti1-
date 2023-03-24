@@ -87,7 +87,6 @@ class HirsipuuValikko:
             elif komento == "2":
                 self.__historia.hae_historia()
             elif komento == "3":
-                self.__historia.tallenna_historia()
                 break
 
 class Pelihistoria:
