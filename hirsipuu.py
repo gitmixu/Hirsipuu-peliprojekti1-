@@ -50,7 +50,7 @@ class HirsipuuPeli:
                 print(kirjain, end="")
             print("", end="\n")
             print()
-            print(f"Yrityksiä jäljellä {self.__elamat * '*'}")
+            print(f"Elämiä jäljellä {self.__elamat * '*'}")
             self.arvaa()
             if self.__voitto != 0:
                 break
