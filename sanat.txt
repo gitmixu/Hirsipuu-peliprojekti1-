@@ -87,3 +87,8 @@ kameli
 kasvi
 keho
 kenguru
+kesä
+kirja
+kolikko
+koulu
+kulta
