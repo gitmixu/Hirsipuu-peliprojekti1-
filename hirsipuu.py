@@ -117,8 +117,9 @@ class Pelihistoria:
                     continue
                 self.__historia.append((pilkottu[0], pilkottu[1], pilkottu[2], pilkottu[3]))
         print()
+        print("Päivämäärä   Kulunut aika   Arvattava sana   Elämiä jäljellä")
         for tiedot in self.__historia:
-            print(f"Päivämäärä {tiedot[0]}     Kulunut aika {tiedot[1]}     Arvattava sana {tiedot[2]}     Elämiä jäljellä {tiedot[3]}")
+            print(f"{tiedot[0]:12} {tiedot[1]:14} {tiedot[2]:16} {tiedot[3]:10}")
 
 
 peli = HirsipuuValikko()
