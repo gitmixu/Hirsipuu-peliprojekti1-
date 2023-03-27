@@ -3,13 +3,13 @@ class HirsipuuPeli:
         self.__elamat = 0
         self.__vastaus = ""
         self.__arvattava = []
-        self.__voitto = 0           #0 merkitsee tappiota, suuremmat arvot voittoa
+        self.__voitto = 0
 
     def pelin_aloitus(self):
         self.__arvattava.clear()
         self.__voitto = 0
         sanavarasto = []
-        from random import choice
+        from random import choice, randint
         with open("sanat.txt") as tiedosto:
             for rivi in tiedosto:
                 sana = rivi.strip()
@@ -19,10 +19,20 @@ class HirsipuuPeli:
                     sana = sana.replace("Ã¶", "ö")
                 sanavarasto.append(sana)
         self.__vastaus = choice(sanavarasto)
-        self.__elamat = len(self.__vastaus) // 2 + 2        #elämien määrä riippuu sanan pituudesta?
+        self.__elamat = len(self.__vastaus) // 2 + 2
+        vinkkinumero = randint(len(self.__vastaus[0]), len(self.__vastaus[-1]))
+        vinkkikirjain = self.__vastaus[vinkkinumero]
         while len(self.__arvattava) < len(self.__vastaus):
             self.__arvattava.append("_")
-        print(self.__vastaus)       #tämä poistetaan toki näkyvistä myöhemmin
+        apuri = 0
+        while apuri < len(self.__vastaus):
+            if vinkkikirjain == self.__vastaus[apuri]:
+                self.__arvattava[apuri] = vinkkikirjain
+            apuri += 1
+        verrokki = ""
+        for kirjain in self.__arvattava:
+            verrokki += kirjain
+        print()
 
     def arvaa(self):
         syote = input("Kirjoita yksi kirjain tai arvaa koko sana: ")
@@ -120,7 +130,6 @@ class Pelihistoria:
         print("Päivämäärä   Kulunut aika   Arvattava sana   Elämiä jäljellä")
         for tiedot in self.__historia:
             print(f"{tiedot[0]:12} {tiedot[1]:14} {tiedot[2]:16} {tiedot[3]:10}")
-
 
 peli = HirsipuuValikko()
 peli.suorita()
