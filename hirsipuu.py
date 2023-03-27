@@ -112,6 +112,9 @@ class HirsipuuValikko:
             elif komento == "2":
                 self.__historia.hae_historia()
             elif komento == "3":
+                print()
+                print("Kiitos kun pelasit!")
+                print("Tekijät: Micaela Savioja & Arto Eskelinen")
                 break
 
 class Pelihistoria:
