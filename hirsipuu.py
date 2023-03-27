@@ -1,6 +1,5 @@
 class HirsipuuPeli:
     def __init__(self):
-        self.__historia = Pelihistoria()
         self.__elamat = 0
         self.__vastaus = ""
         self.__arvattava = []
@@ -96,7 +95,7 @@ class HirsipuuValikko:
         print("                      ¤¤¤¤¤¤¤")
         while True:
             print("")
-            print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
+            print("1 - aloita peli, 2 - katsele pelihistoriaa, 3 - lopeta")
             komento = input("Komento: ")
             if komento == "1":
                 self.__hirsipuupeli.pelaa()
@@ -106,11 +105,14 @@ class HirsipuuValikko:
                 break
 
 class Pelihistoria:
-    def hae_historia(self):
-        pass
+    def __init__(self):
+        self.__historia = []
 
-    def tallenna_historia(self):
-        pass
+    def hae_historia(self):
+        with open("historia.csv") as tiedosto:
+            for rivi in tiedosto:
+                pilkottu = rivi.split(";")
+                
 
 peli = HirsipuuValikko()
 peli.suorita()
