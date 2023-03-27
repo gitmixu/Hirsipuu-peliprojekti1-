@@ -46,7 +46,7 @@ class HirsipuuPeli:
     def pelaa(self):
         from datetime import timedelta, datetime
         start = datetime.now().time()
-        self._aloitusAika = timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
+        self._aloitusAika = timedelta(minutes=start.minute, seconds=start.second)
         self.pelin_aloitus()
         while self.__elamat > 0:
             for kirjain in self.__arvattava:
@@ -60,12 +60,12 @@ class HirsipuuPeli:
             self.__elamat -= 1
         if self.__voitto == 0:
             end = datetime.now().time()
-            self._lopetusAika = timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+            self._lopetusAika = timedelta(minutes=end.minute, seconds=end.second)
             print(f"Parempi onni ensi kerralla! Oikea vastaus oli {self.__vastaus}.")
             self.tallenna()
         else:
             end = datetime.now().time()
-            self._lopetusAika = timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+            self._lopetusAika = timedelta(minutes=end.minute, seconds=end.second)
             print(f"Upeaa! Arvasit sanan {self.__vastaus}!")
             self.tallenna()
             
@@ -74,7 +74,8 @@ class HirsipuuPeli:
         pvm = datetime.date.today()
         uusi_pvm = pvm.strftime("%d.%m.%Y")
         self.__kulunutAika = self._lopetusAika - self._aloitusAika
-        tiedot = [str(uusi_pvm), str(self.__kulunutAika), str(self.__vastaus), str(self.__elamat)]
+        kulunutAika_mjono = str(self.__kulunutAika)
+        tiedot = [str(uusi_pvm), kulunutAika_mjono[2:], str(self.__vastaus), str(self.__elamat)]
         with open("historia.csv", "a") as tiedosto:
             tiedosto.write(";".join(tiedot) + "\n")
 
