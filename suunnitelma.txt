@@ -1,13 +1,3 @@
-HIRSIPUU
-|   0  0
-|    0 0
-o      0
-T      0
-^      0
-      ¤¤¤
-     ¤¤¤¤¤
-    ¤¤¤¤¤¤¤
-
 Säännöt:
 -Arvausten lukumäärä riippuu sanan pituudesta; lyhyessä sanassa vähemmän, pidemmissä enemmän.
 -Alussa yksi kirjain näytetään vihjeenä pelaajalle.
@@ -20,8 +10,9 @@ Funktioita/luokkia:
 -HirsipuuValikko (käyttöliittymä)
 -Pelihistoria (tiedonhaku)
 
-Historian tulostus (esimerkki kun halutaan tarkastella tietoja)
+Historian tulostus: (esimerkki kun halutaan tarkastella tietoja)
 pvm     mennytaika    sana    elämät
 
 Projektiin kulunut aika & työnjako:
--Projekti aloitettiin 22.3. ja saatettiin päätökseen 28.3. Työaikaa kertyi yhteensä noin 17 tuntia.
+-Projekti aloitettiin 22.3. ja saatettiin päätökseen 28.3. Työaikaa kertyi yhteensä noin 18 tuntia.
+-Micaela suunnitteli luokkien väliset rajapinnat ja ohjelman rungon, --
