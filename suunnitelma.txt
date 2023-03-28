@@ -1,0 +1,23 @@
+HIRSIPUU
+|   0  0
+|    0 0
+o      0
+T      0
+^      0
+      ¤¤¤
+     ¤¤¤¤¤
+    ¤¤¤¤¤¤¤
+
+Säännöt:
+-5 arvausta: kuvassa merkit "|", "|", "o", "T" sekä "^".
+-Alussa sanan jokainen kirjain on tuntematon.
+-Pelataan tietokoneen kanssa; ohjelma valitsee yhden sanan tiedostosta jota pelaaja koettaa arvata.
+-Pelatessa mahdollisuus arvata koko sana tai yksi kirjain? Molemmissa väärästä yksi lisäys kuvaan.
+
+Funktioita/luokkia:
+-Hirsipuu (sovelluslogiikka)
+-HirsipuuPeli (käyttöliittymä)
+-Pelihistoria (tiedonhaku/tallennus)
+
+Historian tulostus (esimerkki kun halutaan tarkastella tietoja)
+pvm     mennytaika    sana    elämät
