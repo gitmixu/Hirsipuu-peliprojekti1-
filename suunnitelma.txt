@@ -1,6 +1,6 @@
 Säännöt:
 -Arvausten lukumäärä riippuu sanan pituudesta; lyhyessä sanassa vähemmän, pidemmissä enemmän.
--Alussa yksi kirjain näytetään vihjeenä pelaajalle.
+-Alussa yksi sanassa esiintyvä kirjain näytetään vihjeenä pelaajalle.
 -Pelataan tietokoneen kanssa; ohjelma valitsee sanan tiedostosta jota pelaaja koettaa arvata.
 -Pelatessa mahdollisuus arvata koko sana tai yksi kirjain. Molemmissa väärästä rangaistaan elämän menettämisellä.
 -Elämien loputtua tai sanan oikealla arvaamisella näytetään vastaus sekä tallennetaan pelaamiseen liittyvää dataa tiedostoon.
@@ -15,4 +15,6 @@ pvm     mennytaika    sana    elämät
 
 Projektiin kulunut aika & työnjako:
 -Projekti aloitettiin 22.3. ja saatettiin päätökseen 28.3. Työaikaa kertyi yhteensä noin 18 tuntia.
--Micaela suunnitteli luokkien väliset rajapinnat ja ohjelman rungon, --
+-Micaela suunnitteli luokkien väliset rajapinnat ja ohjelman rungon sekä kirjoitti leijonanosan ajan tallentamiseen liittyvästä koodista.
+-Arto kirjoitti pääosan muusta koodista, suunnitteli "aloituskuvan" ja lisäsi sanavaihtoehdot pelin varastoon.
+-Yhdessä suunnittelimme säännöt, paransimme ajantallennusta sekä tiedonhakua ja testasimme ohjelmaa.
