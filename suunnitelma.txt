@@ -22,3 +22,6 @@ Funktioita/luokkia:
 
 Historian tulostus (esimerkki kun halutaan tarkastella tietoja)
 pvm     mennytaika    sana    elämät
+
+Projektiin kulunut aika & työnjako:
+-
