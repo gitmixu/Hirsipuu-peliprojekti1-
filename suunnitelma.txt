@@ -9,15 +9,15 @@ T      0
     ¤¤¤¤¤¤¤
 
 Säännöt:
--5 arvausta: kuvassa merkit "|", "|", "o", "T" sekä "^".
--Alussa sanan jokainen kirjain on tuntematon.
+-Arvausten lukumäärä riippuu sanan pituudesta; lyhyessä sanassa vähemmän, pidemmissä enemmän.
+-Alussa yksi kirjain näytetään vihjeenä pelaajalle.
 -Pelataan tietokoneen kanssa; ohjelma valitsee yhden sanan tiedostosta jota pelaaja koettaa arvata.
--Pelatessa mahdollisuus arvata koko sana tai yksi kirjain? Molemmissa väärästä yksi lisäys kuvaan.
+-Pelatessa mahdollisuus arvata koko sana tai yksi kirjain. Molemmissa väärästä rangaistaan elämän menettämisellä.
 
 Funktioita/luokkia:
--Hirsipuu (sovelluslogiikka)
--HirsipuuPeli (käyttöliittymä)
--Pelihistoria (tiedonhaku/tallennus)
+-HirsipuuPeli (sovelluslogiikka ja tallennus)
+-HirsipuuValikko (käyttöliittymä)
+-Pelihistoria (tiedonhaku)
 
 Historian tulostus (esimerkki kun halutaan tarkastella tietoja)
 pvm     mennytaika    sana    elämät
