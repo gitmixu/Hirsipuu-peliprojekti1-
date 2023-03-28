@@ -121,7 +121,7 @@ class Pelihistoria:
         self.__historia = []
 
     def hae_historia(self):
-        self.__historia = []
+        self.__historia.clear()
         with open("historia.csv") as tiedosto:
             for rivi in tiedosto:
                 katkaistu = rivi.strip("\n")
