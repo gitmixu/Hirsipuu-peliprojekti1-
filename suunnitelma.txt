@@ -11,11 +11,12 @@ T      0
 Säännöt:
 -Arvausten lukumäärä riippuu sanan pituudesta; lyhyessä sanassa vähemmän, pidemmissä enemmän.
 -Alussa yksi kirjain näytetään vihjeenä pelaajalle.
--Pelataan tietokoneen kanssa; ohjelma valitsee yhden sanan tiedostosta jota pelaaja koettaa arvata.
+-Pelataan tietokoneen kanssa; ohjelma valitsee sanan tiedostosta jota pelaaja koettaa arvata.
 -Pelatessa mahdollisuus arvata koko sana tai yksi kirjain. Molemmissa väärästä rangaistaan elämän menettämisellä.
+-Elämien loputtua tai sanan oikealla arvaamisella näytetään vastaus sekä tallennetaan pelaamiseen liittyvää dataa tiedostoon.
 
 Funktioita/luokkia:
--HirsipuuPeli (sovelluslogiikka ja tallennus)
+-HirsipuuPeli (sovelluslogiikka ja pelitulosten tallennus)
 -HirsipuuValikko (käyttöliittymä)
 -Pelihistoria (tiedonhaku)
 
