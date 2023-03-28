@@ -103,18 +103,17 @@ class HirsipuuValikko:
         print("                        ¤¤¤")
         print("                       ¤¤¤¤¤")
         print("                      ¤¤¤¤¤¤¤")
+        print()
+        print("    Tekijät: Micaela Savioja & Arto Eskelinen")
         while True:
             print("")
-            print("1 - aloita peli, 2 - katsele pelihistoriaa, 3 - lopeta")
+            print("1 - aloita peli, 2 - katsele historiaa, 3 - lopeta")
             komento = input("Komento: ")
             if komento == "1":
                 self.__hirsipuupeli.pelaa()
             elif komento == "2":
                 self.__historia.hae_historia()
             elif komento == "3":
-                print()
-                print("Kiitos kun pelasit!")
-                print("Tekijät: Micaela Savioja & Arto Eskelinen")
                 break
 
 class Pelihistoria:
